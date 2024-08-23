@@ -3,21 +3,22 @@ import session from 'express-session';
 import passport from 'passport';
 import './auth.mjs';
 import cors from 'cors'
+import dotenv from 'dotenv'
+dotenv.config();
 
 
 const app = express();
+
 app.use(cors({
-    origin: 'http://localhost:3000',  // Allow only your frontend domain
-    credentials: true,  // Allow credentials (cookies, sessions)
+    origin: 'http://localhost:3000', 
+    credentials: true, 
   }));
-  
 app.use(express.json());
 app.use(session({
   secret: 'mysecret',
   resave: false,
   saveUninitialized: true,
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
 

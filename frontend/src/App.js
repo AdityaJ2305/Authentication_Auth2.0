@@ -25,6 +25,10 @@ const Login = () => {
     <div>
       <h1>Login Page</h1>
       <GoogleLoginButton />
+      <form >
+    <input type='file' onChange={(e)=>console.log(e)}></input>
+    {/* <button type='submit'></button> */}
+      </form>
     </div>
   );
 };

@@ -7,7 +7,7 @@ const GoogleLoginButton = () => {
   };
 
   return (
-    <button onClick={handleLogin} style={buttonStyle}>
+    <button onClick={handleLogin} style={buttonStyle} type='button'>
       Login with Google
     </button>
   );
